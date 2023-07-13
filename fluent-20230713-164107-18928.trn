@@ -1,0 +1,1903 @@
+Auto-Transcript Start Time:  16:41:07, 13 Jul 2023 E. South America Standard Time 
+Current Directory: "C:\Users\Ique\Documents\Internship\Femto\ElbowOpt\Code\git"
+Information: The server has started and is running.
+
+              Welcome to ANSYS Fluent 2023 R1
+
+              Copyright 1987-2023 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Nov 28 2022 09:52:02 EST  Build Id: 10208  
+ 
+Connected License Server List:	
+
+*********************************************
+Info: Your license enables 4-way parallel execution.
+For faster simulations, please start the application with the appropriate parallel options.
+*********************************************
+
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-U26BJ62" (win64).
+
+----------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                           
+----------------------------------------------------------------------------------
+n1    DESKTOP-U26BJ62  2/8  Windows-x64  15872  Intel(R) Core(TM) i7-9700KF      
+n0*   DESKTOP-U26BJ62  1/8  Windows-x64  5868   Intel(R) Core(TM) i7-9700KF      
+host  DESKTOP-U26BJ62       Windows-x64  20032  Intel(R) Core(TM) i7-9700KF      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\Ique\\Documents\\Internship\\Femto\\ElbowOpt\\Code\\git\\cleanup-fluent-DESKTOP-U26BJ62-20032.bat
+
+> Fast-loading "C:\PROGRA~1\ANSYS Inc\ANSYS Student\v231\fluent\fluent23.1.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+DESKTOP-U26BJ62 has other FLUENT parallel processes running.                       Process affinity not being set.
+
+Reading from DESKTOP-U26BJ62:"C:\Users\Ique\AppData\Local\Ansys\ansys_fluent_core\examples\mixing_elbow.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+       17822 cells,     1 cell zone  ...
+          17822 mixed cells,  zone id: 87
+       91581 faces,     7 face zones ...
+           2168 polygonal wall faces,  zone id: 34
+            268 polygonal wall faces,  zone id: 33
+            155 polygonal pressure-outlet faces,  zone id: 32
+            152 polygonal velocity-inlet faces,  zone id: 31
+             55 polygonal velocity-inlet faces,  zone id: 30
+           2001 polygonal symmetry faces,  zone id: 29
+          86782 mixed interior faces,  zone id: 89
+       66417 nodes,     1 node zone  ...
+  Done.
+
+
+Building...
+     mesh
+	distributing mesh
+		parts..,
+		faces..,
+		nodes..,
+		cells..,
+        bandwidth reduction using Reverse Cuthill-McKee: 8663/269 = 32.2045
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	wall-elbow
+	wall-inlet
+	outlet
+	cold-inlet
+	hot-inlet
+	symmetry-xyplane
+	interior--elbow-fluid
+	elbow-fluid
+     parallel,
+Done.
+
+Adjusting the following setting:
+Changing Discretization Scheme for Turbulent Kinetic Energy:   from: Second Order Upwind   to: First Order Upwind
+
+Initialize using the hybrid initialization method.
+
+Checking case topology... 
+-This case has both inlets & outlets 
+-Pressure information is not available at the boundaries.
+ Case will be initialized with constant pressure
+
+	iter		scalar-0
+
+	1		1.000000e+00
+	2		1.678024e-04
+	3		8.449991e-06
+	4		7.659636e-06
+	5		1.049405e-06
+	6		1.338542e-06
+	7		1.633264e-07
+	8		1.821736e-07
+	9		3.259553e-08
+	10		3.469135e-08
+
+Hybrid initialization is done.
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 7841 cells 
+     1  1.0000e+00  4.6959e-03  5.3090e-03  5.8458e-04  5.8260e-05  3.1296e+05  2.3231e+09  0:00:00   99
+
+ turbulent viscosity limited to viscosity ratio of 1.000000e+05 in 358 cells 
+     2  8.9197e-01  1.7568e-03  2.8564e-03  5.7127e-04  4.4626e-05  5.0955e-01  5.7130e+00  0:01:38   98
+     3  1.0000e+00  7.8918e-03  4.7505e-03  2.7996e-03  2.3827e-05  2.9974e-01  4.2008e-01  0:01:18   97
+     4  1.0000e+00  2.8290e-02  2.2142e-02  1.9657e-02  3.4162e-05  6.0224e-01  5.8826e-01  0:01:01   96
+     5  1.0000e+00  2.1806e-02  1.8026e-02  1.6409e-02  6.2973e-05  6.9550e-01  6.8358e-01  0:00:49   95
+     6  9.2090e-01  1.4568e-02  1.2605e-02  1.0664e-02  9.0319e-05  7.0493e-01  6.6425e-01  0:00:39   94
+     7  7.2771e-01  8.4334e-03  7.6178e-03  5.8178e-03  1.0209e-04  6.2379e-01  5.9103e-01  0:00:30   93
+     8  5.3968e-01  5.2470e-03  4.7733e-03  3.3137e-03  1.0772e-04  4.4236e-01  4.3379e-01  0:00:24   92
+     9  3.5219e-01  3.7470e-03  3.2272e-03  2.3272e-03  1.1337e-04  2.8400e-01  3.2885e-01  0:00:37   91
+    10  2.1834e-01  3.0634e-03  2.4882e-03  2.0344e-03  1.1630e-04  1.8776e-01  2.6580e-01  0:00:29   90
+    11  1.3459e-01  2.6507e-03  2.3177e-03  1.7199e-03  1.1676e-04  1.2464e-01  2.3117e-01  0:00:23   89
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+    12  9.0068e-02  2.3793e-03  2.2196e-03  1.4614e-03  1.1568e-04  8.5572e-02  2.0422e-01  0:00:18   88
+    13  6.5857e-02  2.1809e-03  2.1101e-03  1.2545e-03  1.1396e-04  6.8303e-02  1.7666e-01  0:00:15   87
+    14  5.0412e-02  2.0149e-03  1.9935e-03  1.1030e-03  1.1215e-04  6.3403e-02  1.5324e-01  0:00:12   86
+    15  3.9325e-02  1.8469e-03  1.8654e-03  9.8992e-04  1.1134e-04  5.8527e-02  1.3087e-01  0:00:09   85
+    16  3.0790e-02  1.6562e-03  1.6494e-03  8.9901e-04  1.0938e-04  5.0388e-02  1.1308e-01  0:00:24   84
+    17  2.4736e-02  1.5279e-03  1.4637e-03  8.2133e-04  1.0540e-04  4.2983e-02  9.2076e-02  0:00:19   83
+    18  2.0286e-02  1.3952e-03  1.3011e-03  7.5231e-04  1.0158e-04  3.6349e-02  7.2472e-02  0:00:15   82
+    19  1.7271e-02  1.2429e-03  1.1663e-03  6.8380e-04  9.7886e-05  2.8394e-02  5.3946e-02  0:00:12   81
+    20  1.4900e-02  1.0941e-03  1.0583e-03  6.1887e-04  9.4908e-05  2.3889e-02  3.9670e-02  0:00:09   80
+    21  1.2913e-02  9.7101e-04  9.7492e-04  5.6079e-04  9.2206e-05  2.2388e-02  3.1174e-02  0:00:07   79
+    22  1.1275e-02  8.7808e-04  9.0173e-04  5.1382e-04  8.9838e-05  2.0289e-02  2.5354e-02  0:00:21   78
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+    23  9.8685e-03  7.8849e-04  8.2955e-04  4.7380e-04  8.8287e-05  1.7354e-02  2.0769e-02  0:00:17   77
+    24  8.7060e-03  7.0041e-04  7.5907e-04  4.3870e-04  8.6695e-05  1.4344e-02  1.7106e-02  0:00:13   76
+    25  7.8128e-03  6.2190e-04  6.9388e-04  4.0927e-04  8.4306e-05  1.1809e-02  1.4028e-02  0:00:11   75
+    26  6.9998e-03  5.5755e-04  6.3556e-04  3.8195e-04  8.2135e-05  9.7568e-03  1.1338e-02  0:00:08   74
+    27  6.2479e-03  5.0832e-04  5.8504e-04  3.5672e-04  7.9179e-05  8.0657e-03  9.0742e-03  0:00:07   73
+    28  5.5998e-03  4.6687e-04  5.3967e-04  3.3248e-04  7.5598e-05  6.7501e-03  7.3158e-03  0:00:05   72
+    29  5.1006e-03  4.3005e-04  4.9779e-04  3.0898e-04  7.1355e-05  5.7192e-03  5.9962e-03  0:00:18   71
+    30  4.6627e-03  3.9664e-04  4.6052e-04  2.8650e-04  6.6548e-05  4.8582e-03  4.9752e-03  0:00:14   70
+    31  4.2378e-03  3.6558e-04  4.2819e-04  2.6561e-04  6.1543e-05  4.1453e-03  4.1943e-03  0:00:11   69
+    32  3.8486e-03  3.3654e-04  3.9937e-04  2.4565e-04  5.6604e-05  3.5468e-03  3.5910e-03  0:00:09   68
+    33  3.4789e-03  3.0979e-04  3.7321e-04  2.2612e-04  5.1742e-05  3.0732e-03  3.1445e-03  0:00:07   67
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+    34  3.1549e-03  2.8437e-04  3.4897e-04  2.0737e-04  4.6819e-05  2.7098e-03  2.8079e-03  0:00:06   66
+    35  2.8732e-03  2.6037e-04  3.2578e-04  1.8993e-04  4.1969e-05  2.4249e-03  2.5346e-03  0:00:17   65
+    36  2.6097e-03  2.3764e-04  3.0446e-04  1.7337e-04  3.7507e-05  2.1780e-03  2.2937e-03  0:00:14   64
+    37  2.3546e-03  2.1607e-04  2.8370e-04  1.5807e-04  3.3436e-05  1.9532e-03  2.0607e-03  0:00:11   63
+    38  2.1261e-03  1.9606e-04  2.6487e-04  1.4385e-04  2.9764e-05  1.7450e-03  1.8323e-03  0:00:08   62
+    39  1.9390e-03  1.7749e-04  2.4713e-04  1.3042e-04  2.6430e-05  1.5546e-03  1.6148e-03  0:00:07   61
+    40  1.7660e-03  1.6038e-04  2.3055e-04  1.1812e-04  2.3385e-05  1.3851e-03  1.4164e-03  0:00:05   60
+    41  1.6075e-03  1.4441e-04  2.1474e-04  1.0675e-04  2.0531e-05  1.2424e-03  1.2497e-03  0:00:04   59
+    42  1.4590e-03  1.2970e-04  1.9950e-04  9.6356e-05  1.7996e-05  1.1220e-03  1.1226e-03  0:00:15   58
+    43  1.3254e-03  1.1612e-04  1.8472e-04  8.6891e-05  1.5747e-05  1.0179e-03  1.0149e-03  0:00:12   57
+    44  1.2023e-03  1.0377e-04  1.7057e-04  7.8261e-05  1.3705e-05  9.2564e-04  9.2337e-04  0:00:09   56
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+    45  1.0882e-03  9.2688e-05  1.5703e-04  7.0392e-05  1.1912e-05  8.4365e-04  8.4286e-04  0:00:07   55
+    46  9.8272e-04  8.2739e-05  1.4437e-04  6.3204e-05  1.0282e-05  7.7019e-04  7.6744e-04  0:00:06   54
+    47  8.8440e-04  7.3814e-05  1.3244e-04  5.6546e-05  8.8154e-06  7.0582e-04  6.9917e-04  0:00:04   53
+    48  7.9430e-04  6.5711e-05  1.2099e-04  5.0432e-05  7.4840e-06  6.4556e-04  6.3523e-04  0:00:14   52
+    49  7.1396e-04  5.8427e-05  1.1013e-04  4.4818e-05  6.3385e-06  5.8851e-04  5.7447e-04  0:00:11   51
+    50  6.3733e-04  5.1805e-05  9.9909e-05  3.9670e-05  5.3041e-06  5.3322e-04  5.1722e-04  0:00:09   50
+    51  5.6663e-04  4.5846e-05  9.0312e-05  3.4974e-05  4.4454e-06  4.8269e-04  4.6419e-04  0:00:07   49
+    52  5.0369e-04  4.0563e-05  8.1281e-05  3.0721e-05  3.7058e-06  4.3601e-04  4.1478e-04  0:00:05   48
+    53  4.4852e-04  3.5814e-05  7.2865e-05  2.6887e-05  3.0804e-06  3.9228e-04  3.6911e-04  0:00:04   47
+    54  3.9955e-04  3.1543e-05  6.5002e-05  2.3433e-05  2.5475e-06  3.5198e-04  3.2771e-04  0:00:03   46
+    55  3.5375e-04  2.7684e-05  5.7762e-05  2.0344e-05  2.1030e-06  3.1503e-04  2.9056e-04  0:00:12   45
+
+  iter  continuity  x-velocity  y-velocity  z-velocity      energy           k     epsilon     time/iter
+    56  3.1133e-04  2.4231e-05  5.1123e-05  1.7604e-05  1.7411e-06  2.8107e-04  2.5702e-04  0:00:09   44
+    57  2.7416e-04  2.1203e-05  4.5048e-05  1.5173e-05  1.4374e-06  2.4984e-04  2.2670e-04  0:00:07   43
+    58  2.4137e-04  1.8536e-05  3.9580e-05  1.3038e-05  1.1842e-06  2.2126e-04  1.9951e-04  0:00:06   42
+    59  2.1164e-04  1.6197e-05  3.4617e-05  1.1178e-05  9.7071e-07  1.9494e-04  1.7525e-04  0:00:04   41
+!   59 solution is converged
+
+==============================================================================
+
+Node 1: Process 15872: Received signal SIGSEGV.
+
+==============================================================================
+
+==============================================================================
+
+Node 0: Process 5868: Received signal SIGSEGV.
+
+==============================================================================
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+999999: mpt_accept: error: accept failed: No error
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 15872 RUNNING AT DESKTOP-U26BJ62
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+ The fl process could not be started.
