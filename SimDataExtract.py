@@ -31,7 +31,6 @@ for hot_inlet_velocity in velocity_range:
             "cold-inlet", (), "ke-spec", "no", "no", "no", "yes", "quit")
         solver.tui.define.boundary_conditions.set.velocity_inlet(
             "cold-inlet", (), "turb-intensity", cold_inlet_velocity, "quit")
-
         solver.tui.define.boundary_conditions.set.velocity_inlet(
             "hot-inlet", (), "ke-spec", "no", "no", "no", "yes", "quit")
         solver.tui.define.boundary_conditions.set.velocity_inlet(
@@ -44,11 +43,10 @@ for hot_inlet_velocity in velocity_range:
         # Running the Solver
         solver.solution.run_calculation.iterate(iter_count=100)
 
+        # Collecting field data
         field_data = solver.field_data
 
-        # help(field_data.get_vector_field_data())
-
-        # Get velocity magnitudes of hot-inlet, cold-inlet, and outlet
+        # Get velocity magnitudes of hot-inlet, cold-inlet, and outlet from field data
         hot_inlet_velocity_mag = field_data.get_vector_field_data(surface_name="hot-inlet", field_name="velocity")
         cold_inlet_velocity_mag = field_data.get_vector_field_data(surface_name="cold-inlet", field_name="velocity")
         outlet_velocity_mag = field_data.get_vector_field_data(surface_name="outlet", field_name="velocity")
@@ -63,6 +61,6 @@ for hot_inlet_velocity in velocity_range:
 # Save DataFrame to CSV
 results.to_csv('data.csv', index=False)
 
-# Add an input prompt to keep the Python interpreter running
+# Prints if code executed properly
 input("Success! Press enter to exit...")
 
